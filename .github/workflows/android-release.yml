@@ -27,5 +27,9 @@ jobs:
           channel: stable
           version: 3.0.2
 
-      - name: Install dependencies
-        run: flutter pub get
+- name: Install Flutter
+  uses: subosito/flutter-action@v2
+  with:
+    flutter-version: '2.10.0'
+    channel: 'stable'
+- run: flutter build apk
